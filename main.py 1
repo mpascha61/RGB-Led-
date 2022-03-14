@@ -1,0 +1,20 @@
+''' This file is the class-based version of making a single LED fade'''
+import time
+import board
+from rgb import LED   # import the LED class from the rgb module
+
+blueLEDPin = board.D9
+greenLEDPin = board.D8
+redLEDPin = board.D7
+
+myBlueLED = LED(blueLEDPin)
+myGreenLED = LED(greenLEDPin)
+myRedLED = LED(redLEDPin)
+
+while True:
+    myBlueLED.fade()
+    time.sleep(1)
+    myGreenLED.fade()
+    time.sleep(1)
+    myRedLED.fade()
+    time.sleep(1)
